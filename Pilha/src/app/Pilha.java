@@ -26,14 +26,14 @@ public class Pilha{
         if(this.pilhaVazia()){
             return null;
         }
-        return this.topo;  //Retorna o valor que está contido no topo da pilha
+        return this.topo.getElemento();  //Retorna o valor que está contido no topo da pilha
     }
 
     public void desempilhar(){
         if(this.tamanho() == 0){
-            System.out.println("Pilha Vazia, impossível de desempilhar");
+            System.out.println("Vazia");
         }  
-        topo = this.topo.getProximo();  //O topo da pilha recebe seu próximo elemento logo abaixo
+        topo = topo.getProximo();       //O topo da pilha recebe seu próximo elemento logo abaixo
         this.posicaoPilha--;            //Decrementa a posição do topo da fila
     }
 
